@@ -12,11 +12,11 @@ pipeline {
             }
        }
 
-       stage('Ls'){
+       stage('Docker Build'){
         steps{
         //  env.NODE_ENV = "test"
          print "Environment will be : ${env.NODE_ENV}"
-         sh 'ls'
+         sh 'docker build . -t application:latest'
          }
        }
 
