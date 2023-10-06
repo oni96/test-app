@@ -16,6 +16,7 @@ pipeline {
         steps{
         //  env.NODE_ENV = "test"
          print "Environment will be : ${env.NODE_ENV}"
+            sh 'whoami'
          sh 'docker build . -t application:latest'
          }
        }
