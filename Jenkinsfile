@@ -14,7 +14,7 @@ pipeline {
 
     stage('Docker Build'){
         steps{
-         sh 'docker build . -t application:latest'
+         sh 'docker build . -t node-app:latest'
          }
        }
 
@@ -30,13 +30,13 @@ pipeline {
     stage('Docker Tag'){
         steps{
 
-         sh 'docker tag application:latest public.ecr.aws/y4f5w3j8/026-node-app:latest'
+         sh 'docker tag node-app:latest 427134667329.dkr.ecr.us-east-1.amazonaws.com/node-app:latest'
          }
        }
 
     stage('Docker Push'){
         steps{
-         sh 'docker push public.ecr.aws/y4f5w3j8/026-node-app:latest '
+         sh 'docker push 427134667329.dkr.ecr.us-east-1.amazonaws.com/node-app:latest '
          }
        }
 
