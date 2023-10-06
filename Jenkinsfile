@@ -3,7 +3,7 @@
 
 pipeline {
     agent{
-        label 'linux'
+        label 'node'
     }
  stages{
        stage('Checkout'){
@@ -14,7 +14,7 @@ pipeline {
 
        stage('Ls'){
         steps{
-         env.NODE_ENV = "test"
+        //  env.NODE_ENV = "test"
          print "Environment will be : ${env.NODE_ENV}"
          sh 'ls'
          }
