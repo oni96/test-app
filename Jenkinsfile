@@ -30,13 +30,13 @@ pipeline {
     stage('Docker Tag'){
         steps{
 
-         sh 'docker tag node-app:latest 427134667329.dkr.ecr.us-east-1.amazonaws.com/node-app:latest'
+         sh 'docker tag node-app:latest 427134667329.dkr.ecr.us-east-1.amazonaws.com/026-node-app:latest'
          }
        }
 
     stage('Docker Push'){
         steps{
-         sh 'docker push 427134667329.dkr.ecr.us-east-1.amazonaws.com/node-app:latest '
+         sh 'docker push 427134667329.dkr.ecr.us-east-1.amazonaws.com/026-node-app:latest'
          }
        }
 
